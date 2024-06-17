@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <main id="container">
+        <section id="img">
+            <img src="bg.svg">
+        </section>
+
+        <section id="imc-table">
+            <h2>Tabela IMC</h2>
+            <table>
+                <tr>
+                    <th>Classificação</th>
+                    <th>IMC</th>
+                </tr>
+                <tr>
+                    <td>Muito abaixo do peso</td>
+                    <td>Abaixo de 16,9</td>
+                </tr>
+                <tr>
+                    <td>Abaixo do peso</td>
+                    <td>Entre 17 e 18,4</td>
+                </tr>
+                <tr>
+                    <td>Peso normal</td>
+                    <td>Entre 18,5 e 24,9</td>
+                </tr>
+                <tr>
+                    <td>Acima do Peso</td>
+                    <td>Entre 25 e 29,9</td>
+                </tr>
+                <tr>
+                    <td>Obesidade Grau I</td>
+                    <td>Entre 30 e 34,9</td>
+                </tr>
+                <tr>
+                    <td>Obesidade Grau II</td>
+                    <td>Entre 35 e 40</td>
+                </tr>
+                <tr>
+                    <td>Obesidade Grau III</td>
+                    <td>Acima de 40</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="calculator">
+            <form id="form">
+                <h1>Calculadora - IMC</h1>
+
+                <div class="input-box">
+                    <label for="weight">Peso em Kg</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-weight-hanging"></i>
+                        <input type="number" id="weight" required>
+                        <span>Kg</span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="height">Altura em metros</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-ruler"></i>
+                        <input type="number" id="height" required>
+                        <span>m</span>
+                    </div>
+                </div>
+
+                <button id="calculateBtn">Calcular</button>
+            </form>
+
+            <div id="infos" style="display: none;">
+                <div id="result">
+                    <div id="bmi">
+                        <span id="value"></span>
+                        <span>Seu IMC</span>
+                    </div>
+                    <div id="description">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div id="more_info">
+                    <a href="https://www.lusiadas.pt/blog/prevencao-estilo-vida/nutricao-dieta/imc-que">
+                        Mais informações sobre o IMC
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
